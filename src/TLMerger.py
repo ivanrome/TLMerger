@@ -667,7 +667,7 @@ def SendMessageClient1(*args, **kwargs):
         return SendMessageClient1(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN SendFileClient1: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))        
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -685,7 +685,7 @@ def SendFileClient2(*args, **kwargs):
         return SendFileClient2(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN SendFileClient2: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         ExceptionReached = True
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
@@ -704,7 +704,7 @@ def SendFileClient1(*args, **kwargs):
         return SendFileClient1(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN SendFileClient1: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         ExceptionReached = True
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
@@ -723,7 +723,7 @@ def SendMessageClient2(*args, **kwargs):
         return SendMessageClient2(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN SendMessageClient2: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -741,7 +741,7 @@ def ForwardMessageClient1(*args, **kwargs):
         return ForwardMessageClient1(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN ForwardMessageClient1: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -759,7 +759,7 @@ def ForwardMessageClient2(*args, **kwargs):
         return ForwardMessageClient2(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN ForwardMessageClient2: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -777,7 +777,7 @@ def DeleteMessageClient1(*args, **kwargs):
         return DeleteMessageClient1(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN DeleteMessageClient1: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -795,7 +795,7 @@ def DeleteMessageClient2(*args, **kwargs):
         return DeleteMessageClient2(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN DeleteMessageClient2: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -813,7 +813,7 @@ def SendRequestClient1(*args, **kwargs):
         return SendRequestClient1(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN SendRequestClient1: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -831,7 +831,7 @@ def SendRequestClient2(*args, **kwargs):
         return SendRequestClient2(*args, **kwargs)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN SendRequestClient2: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -849,7 +849,7 @@ def GetIncomingIdOfUser1(u):
         return GetIncomingIdOfUser1(u)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN GETINCOMINGIDOFUSER1: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -867,7 +867,7 @@ def GetIncomingIdOfUser2(u):
         return GetIncomingIdOfUser2(u)
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN GETINCOMINGIDOFUSER2: " + str(e))
-        print("Something went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("Something went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -888,7 +888,7 @@ def DownloadMedia(*args, **kwargs):
         return
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN DownloadMedia: " + str(e))
-        print("Something went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("Something went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         if ExceptionReached is False:
             getpass("Press ENTER to try again: ")
             ExceptionReached = True
@@ -1186,7 +1186,7 @@ def GatherAllMessages(chat):
         print("\nDone! Backed up", count, "messages and", len(found_media), "files.")
     except Exception as e:
         logging.exception("TLMERGER TELEGRAMEXCEPTION IN GATHERALLMESSAGES: " + str(e))
-        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n"  + str(e))
+        print("\nSomething went wrong in Telegram's side. This is the full exception:\n\n" + str(e))
         getpass("This part of the process can't be recovered. You must start from scratch.\n\nYou can report this issue at https://github.com/TelegramTools/TLMerger/issues/new. Please, give as much details as possible of the error message and attach the 'TLMerger-log.log' file, as all the detailed information about the bug has been written there.\n\nPress ENTER to close the app...")
         exit(0)
     return
