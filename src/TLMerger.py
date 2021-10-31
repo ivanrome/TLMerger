@@ -849,7 +849,8 @@ def SendRequestClient2(*args, **kwargs):
 def GetIncomingIdOfUser1(u):
     global ExceptionReached
     try:
-        return client2.get_messages(u, limit=1)[0].id
+        #return client2.get_messages(u, limit=1)[0].id
+        return client1.get_messages(u, limit=1)[0].id
     except FloodWaitError as e:
         logging.exception("TLMERGER FLOODEXCEPTION IN GETINCOMINGIDOFUSER1: " + str(e))
         countdown(e.seconds)
