@@ -1,0 +1,49 @@
+# Keys
+title = "My TOML Config"
+
+# Tables
+[project]
+name = "TLMerger"
+description = "Tool for importing telegram messages."
+version = "1.0.0"
+updated = 2021-10-29T07:32:00Z
+author = "Iván"
+
+[TELEGRAM]
+API_ID = 9999999
+API_HASH = '0123456789abcdef0123456789abcdef'
+PHONE = '+34666666666'
+
+[PARAMETERS]
+CHAT_FETCH_LIMIT = 11
+
+[database]
+# host = "127.0.0.1"
+# password = "p@ssw0rd"
+# port = 5432
+# name = "my_database"
+# connection_max = 5000
+# enabled = true
+
+# Nested `tables`
+# [environments]
+#   [environments.dev]
+#     ip = "10.0.0.1"
+#     dc = "eqdc10"
+#   [environments.staging]
+#     ip = "10.0.0.2"
+#     dc = "eqdc10"
+#   [environments.production]
+#     ip = "10.0.0.3"
+#     dc = "eqdc10"
+
+# Array of Tables
+# [[testers]]
+# id = 1
+# username = "JohnCena"
+# password = "YouCantSeeMe69"
+
+# [[testers]]
+# id = 3
+# username = "TheRock"
+# password = "CantCook123"

@@ -20,10 +20,17 @@ from telethon.tl.types import *
 from telethon.utils import *
 from telethon.sessions import *
 import pyAesCrypt
+"""Load configuration from .toml file."""
+import toml
+
+#https://stackoverflow.com/questions/52002524/sending-telegram-messages-with-telethon-some-entity-parameters-work-others-don
+
+# Read local file `config.toml`.
+config = toml.load('settings/config.toml')
 
 __version__ = '1.1'
-api_id = YOUR_API_ID_HERE
-api_hash = 'YOUR_API_HASH_HERE'
+api_id = config['TELEGRAM']['API_ID']
+api_hash = config['TELEGRAM']['API_HASH']
 TLdevice_model = 'Desktop device'
 TLsystem_version = 'Console'
 TLapp_version = '- TLMerger ' + __version__
@@ -67,8 +74,8 @@ password = "YOUR_PASSWORD_FOR_SECRET_MODE_HERE"
 bufferSize = 64 * 4096
 secretdbstream = None
 
-chatFetchLimit = 10
-phone = '+34666666666'
+chatFetchLimit = config['PARAMETERS']['CHAT_FETCH_LIMIT']
+phone = config['TELEGRAM']['PHONE']
 autoLogout = False
 
 client1 = TelegramClient('User1', api_id, api_hash, device_model=TLdevice_model, system_version=TLsystem_version, app_version=TLapp_version, lang_code=TLlang_code, system_lang_code=TLsystem_lang_code)
