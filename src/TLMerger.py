@@ -66,6 +66,7 @@ secretdbstream = None
 
 chatFetchLimit = 10
 phone = '+34666666666'
+autoLogout = False
 
 client1 = TelegramClient('User1', api_id, api_hash, device_model=TLdevice_model, system_version=TLsystem_version, app_version=TLapp_version, lang_code=TLlang_code, system_lang_code=TLsystem_lang_code)
 
@@ -3600,14 +3601,18 @@ else:
     print("Everything went good and it seems that no errors happened during the execution of the app!")
 print()
 print()
-getpass("Press ENTER to log out of Telegram")
-if not SoloImporting:
-    print('\nLogging ' + SelfUser1.first_name + ' (+' + SelfUser1.phone + ') and ' + SelfUser2.first_name + ' (+' + SelfUser2.phone + ') out of Telegram...')
-    client1.log_out()
-    client2.log_out()
+
+if autoLogout:
+    getpass("Press ENTER to log out of Telegram")
+    if not SoloImporting:
+        print('\nLogging ' + SelfUser1.first_name + ' (+' + SelfUser1.phone + ') and ' + SelfUser2.first_name + ' (+' + SelfUser2.phone + ') out of Telegram...')
+        client1.log_out()
+        client2.log_out()
+    else:
+        print('\nLogging ' + SelfUser1.first_name + ' (+' + SelfUser1.phone + ')')
+        client1.log_out()
 else:
-    print('\nLogging ' + SelfUser1.first_name + ' (+' + SelfUser1.phone + ')')
-    client1.log_out()
+    print('Skipping Logging out of  Telegram.')
 print("Thank you very much for using the app!\n\n--ferferga\n\nGOODBYE!")
 print()
 getpass("Press ENTER to close the app: ")
