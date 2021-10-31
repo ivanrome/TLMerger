@@ -64,6 +64,9 @@ password = "YOUR_PASSWORD_FOR_SECRET_MODE_HERE"
 bufferSize = 64 * 4096
 secretdbstream = None
 
+chatFetchLimit = 10
+phone = '+34666666666'
+
 client1 = TelegramClient('User1', api_id, api_hash, device_model=TLdevice_model, system_version=TLsystem_version, app_version=TLapp_version, lang_code=TLlang_code, system_lang_code=TLsystem_lang_code)
 
 def StartClient1():
@@ -71,7 +74,7 @@ def StartClient1():
     try:
         client1.connect()
         if not client1.is_user_authorized():
-            client1.start(force_sms=False)
+            client1.start(force_sms=False, phone=phone)
         SelfUser1 = client1.get_entity(client1.get_me())
     except:
         if not client1.is_connected():
@@ -551,8 +554,6 @@ def PrintChatList():
         while i is None:
             print("This is the chat list:\n\n")
             for i, dialog in enumerate(dialogs, start=1):
-                if i == 3:
-                    break
                 if get_display_name(dialog.entity) == "":
                     name = "Deleted Account"
                 elif isinstance(dialog.entity, InputPeerSelf):
@@ -560,6 +561,8 @@ def PrintChatList():
                 else:
                     name = get_display_name(dialog.entity)
                 sprint('{}. {}'.format(i, name))
+                if 0 < chatFetchLimit == i:
+                    break
 
             print()
             if not SecretMode:
