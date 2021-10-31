@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 import logging, shutil, sqlite3, os, time, io
+import traceback
+#import sys
+
 import progressbar  # progressbar2 module
 try:
     import cryptg
@@ -3377,6 +3380,13 @@ def ExportMessages():
         bar.finish()
         print("Something went wrong in our side. This is the full exception:\n\n"  + str(e))
         print("\nSaving changes in the database, so you can use TLRevert to revert the changes made by TLMerger and remove all the messages sent by the application...")
+        # https://stackoverflow.com/questions/3702675/how-to-catch-and-print-the-full-exception-traceback-without-halting-exiting-the
+        print(traceback.format_exc())
+        # or
+        # print(sys.exc_info()[2])
+
+        print("=========================================================================")
+
         if not SoloImporting:
             DeleteMessageClient1(SelfUser2, message_ids=FetchableMsgIDs, revoke=True)
             reg8 = (SelfUser1.id, SelfUser2.id, SelfUser1.first_name + " (+" + SelfUser1.phone + ")", SelfUser2.first_name + " (+" + SelfUser2.phone + ")", client1.get_messages(user2, limit=0).total, client2.get_messages(user1, limit=0).total, count, SoloImporting)
