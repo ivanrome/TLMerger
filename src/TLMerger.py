@@ -3398,7 +3398,10 @@ def ExportMessages():
 
 def DBConnection(first, close):
     try:
-        conn = sqlite3.connect("data\TLMerger-Database.db", timeout=10)        
+        # conn = sqlite3.connect("data\TLMerger-Database.db", timeout=10)
+        path = os.path.dirname(os.path.abspath(__file__))
+        db = os.path.join(path, 'data', 'TLMerger-Database.db')
+        conn = sqlite3.connect(db, timeout=10)
         if first is True:
             print("Created database successfully!")
         if close is True:
