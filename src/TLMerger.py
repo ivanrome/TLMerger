@@ -1152,9 +1152,9 @@ def GatherAllMessages(chat):
                 from_id = None
             if hasattr(msg, "via_bot_id"):
                 if msg.via_bot_id is not None:
-                    botusername = client1.get_entity(client1.get_input_entity(msg.via_bot_id)).username
-                    if botusername is not None:
-                        via_bot_username = "via @" + botusername
+                    bot_username = client1.get_entity(client1.get_input_entity(msg.via_bot_id)).username
+                    if bot_username is not None:
+                        via_bot_username = "via @" + bot_username
             if getattr(msg, 'fwd_from', None):
                 if isinstance(msg.fwd_from, MessageFwdHeader):
                     fwd_from_sender = msg.fwd_from.from_id
