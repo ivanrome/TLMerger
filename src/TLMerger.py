@@ -998,23 +998,12 @@ def GatherAllMessages(chat):
         bar.update(completed)
         for msg in reversed(messages):
             year = str(msg.date.year)
-            if (msg.date.month < 10):
-                month = "0" + str(msg.date.month)
-            else:
-                month = str(msg.date.month)
-            if (msg.date.day < 10):
-                day = "0" + str(msg.date.day)
-            else:
-                day = str(msg.date.day)
+            month = str(msg.date.month).zfill(2)
+            day = str(msg.date.day).zfill(2)
             hour = str(msg.date.hour+timezonediff)
-            if (msg.date.minute < 10):
-                minute = "0" + str(msg.date.minute)
-            else:
-                minute = str(msg.date.minute)
-            if (msg.date.second < 10):
-                second = "0" + str(msg.date.second)
-            else:
-                second = str(msg.date.second)
+            minute = str(msg.date.minute).zfill(2)
+            second = str(msg.date.second).zfill(2)
+
             if getattr(msg, "sender", None):
                 if get_display_name(msg.sender) == "" or chatname == "":
                     sender = peer
