@@ -1376,7 +1376,7 @@ def ExportMessages():
             Welcmsg = SendMessageClient1(user2, "📲`MERGING THE CHAT WITH` __" + chat_name + "__. __'" + chat_name + "'__ is **" + SelfUser2.first_name + "** now.")
         else:
             Welcmsg = SendMessageClient1(user2,
-                                         "📲`MERGING THE CHAT WITH` __" + chat_name + "__. __'" + chat_name + "'__ is **" + get_display_name(DestinationChat.entity) + "** now.")
+                                         "📲`MERGING THE CHAT WITH` __" + chat_name + "__. __'" + chat_name + "'__ is **" + get_display_name(DestinationChat) + "** now.")
         User1IDs.append(Welcmsg.id)
         if not SoloImporting:
             User2IDs.append(GetIncomingIdOfUser1(user1))
