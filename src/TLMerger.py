@@ -3448,12 +3448,11 @@ database = DBConnection(True, False)
 CreateTables(database)
 print("By default, Telegram returns the hours in GMT+0. If this is not your timezone, please, write how many hours we need to add or substract for your timezone")
 print("\nExamples: If GMT+1, type 1. If it's GMT-9, type -9. If it's GMT+0, type 0.")
-while True:
-    try:
-        timezonediff = int(input("How much we need to sum/substract to the hours?: "))
-        break
-    except ValueError:
-        print("This is not a valid number, please, try again\n")
+
+offset = time.timezone if (time.localtime().tm_isdst == 0) else time.altzone
+timezonediff = int(offset / 60 / 60 * -1)
+print("Calculated timezone offset: {}".format(timezonediff))
+
 getpass("\nNow, you must choose the chat from which we are going to copy the messages: The 'Source' chat. Press ENTER to continue: ")
 print("Gathering chat list from " + SelfUser1.first_name + "...")
 ChosenChat = PrintChatList()
