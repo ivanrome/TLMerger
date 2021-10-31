@@ -1392,8 +1392,8 @@ def ExportMessages():
             if not SoloImporting:
                 message = row[3]
             else:
-                //TODO "if else" has same code in both branches.
-                #message = "`" + row[0] + "`\n" + row[3]
+                # TODO: if else has same code in both branches.
+                # message = "`" + row[0] + "`\n" + row[3]
                 message = row[3]
             if not SoloImporting:
                 if row[4] == 1:
