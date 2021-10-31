@@ -1167,8 +1167,9 @@ def GatherAllMessages(chat):
 
             reg5 = (sender, from_id, msg.id, message, msg.out, system_message, reply_to_msg_id, via_bot_username, fwd_from_id, fwd_from_channel, has_media, DocType, mediaType, mimeType, UnknownType, UnknownClass, day, month, year, hour, minute, second)
             db.execute("INSERT INTO OriginalChat VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", reg5)
-            completed = (completed + 1)
-            bar.update(completed)        
+            # completed = (completed + 1)
+            completed += 1
+            bar.update(completed)
         reg6 = (count, chatID, len(found_media), peer)
         db.execute("INSERT INTO OldChatStatistics VALUES(?,?,?,?)", reg6)
         db.commit()
