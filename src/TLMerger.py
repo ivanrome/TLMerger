@@ -1263,6 +1263,10 @@ def ExportMessages():
     else:
         user1 = client1.get_input_entity(DestinationChat)
 
+    # TODO: Define source and target users.
+    # user2 = client1.get_entity(DestinationChat)
+    user2 = client1.get_input_entity(DestinationChat)
+
     database = DBConnection(False, False)
     if not SoloImporting:
         AccessHash = []
